@@ -22,10 +22,10 @@ export default function VideoPage() {
             <ShareButton />
           </div>
           <video
-          src={videoUrl}
-          controls
-          className="max-w-full mx-auto max-h-screen rounded-lg shadow-lg p-1 border border-gray-600"
-        />
+            src={videoUrl}
+            controls
+            className="max-w-full mx-auto max-h-screen rounded-lg shadow-lg p-1 border border-gray-600"
+          />
         </div>
       )}
       <video

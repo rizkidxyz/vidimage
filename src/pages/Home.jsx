@@ -13,21 +13,22 @@ export default function Home() {
 
   const handleChange = (e) => {
     const selected = e.target.files[0];
+    e.target.value = "";
+  
     if (!selected) return;
-
     const sizeMB = selected.size / (1024 * 1024);
     const isImage = selected.type.startsWith("image/");
     const isVideo = selected.type.startsWith("video/");
-
+  
     if (isImage && sizeMB > 50) {
-      toast.error("Ukuran maksimal gambar adalah 50MB!");
+      toast.error("Ukuran maksimal gambar adalah 50MB!", { duration: 3000 });
       return;
     }
     if (isVideo && sizeMB > 100) {
-      toast.error("Ukuran maksimal video adalah 100MB!");
+      toast.error("Ukuran maksimal video adalah 100MB!", { duration: 3000 });
       return;
     }
-
+  
     setFile(selected);
     setPreviewUrl(URL.createObjectURL(selected));
     setUploadedUrl("");
@@ -35,7 +36,7 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!file) return toast.error("Pilih file terlebih dahulu!");
+    if (!file) return toast.error("Pilih file terlebih dahulu!",{duration:2000});
 
     uploadFile(
       file,
@@ -55,8 +56,7 @@ export default function Home() {
         onSubmit={handleSubmit}
       >
       <p className="text-gray-300 text-lg leading-relaxed mb-6"><span className="text-white text-3xl font-bold">Vidimage </span>
-          Hosting <span className="text-white font-semibold">video & gambar gratis</span> tanpa login akun serta akses tanpa iklan. Upload dan Bagikan ke siapapun sekarang juga! 🚀😎
-           Mendukung: <span className="font-mono text-blue-300">.mp4 .jpg .png .gif .jpeg</span>
+          Hosting atau Upload <span className="text-white font-semibold">video & gambar</span> secara gratis, tanpa login akun, serta akses tanpa iklan. Upload dan Bagikan ke siapapun sekarang juga! 🚀😎
         </p>
         {!isUploading && (
           <div className="mb-6">
@@ -73,6 +73,9 @@ export default function Home() {
               <div className="space-y-2">
                 <i className="fa-solid fa-arrow-up-from-bracket text-2xl"></i>
                 <p>Klik disini untuk Pilih File</p>
+                <p className="text-xs font-medium italic text-gray-500">
+                  .mp4 max(100mb) .png .jpg .jpeg .gif
+                </p>
               </div>
             )}
             </label>
@@ -112,7 +115,7 @@ export default function Home() {
           disabled={isUploading}
           className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          🚀 Upload Sekarang
+          ✨ Upload Sekarang
         </button>
         )}
         {isUploading && (
@@ -165,7 +168,7 @@ export default function Home() {
                 value={linkToCdn(uploadedUrl)}
                 readOnly
                 onClick={(e) => e.target.select()}
-                className="w-full bg-gray-900 text-white px-4 py-2 rounded-md border border-gray-600 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                className="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-600 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
               />
               <button
                 type="button"
@@ -173,7 +176,7 @@ export default function Home() {
                   navigator.clipboard.writeText(linkToCdn(uploadedUrl));
                   toast.success("Berhasil Salin URL file CDN!");
                 }}
-                className="bg-gray-700 hover:bg-gray-600 active:bg-gray-500 transition rounded w-12 flex items-center justify-center"
+                className="bg-gray-700 hover:bg-gray-600 active:bg-gray-500 transition rounded w-14 flex items-center justify-center"
                 title="Salin URL File"
               >
                 <i className="fa-solid fa-copy text-lg text-white" />
