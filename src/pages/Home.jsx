@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <div className="mt-10">
       <form
-        className="max-w-2xl w-full p-4 mx-auto"
+        className="mb-10"
         onSubmit={handleSubmit}
       >
       <p className="text-gray-300 text-lg leading-relaxed mb-6"><span className="text-white text-3xl font-bold">Vidimage </span>

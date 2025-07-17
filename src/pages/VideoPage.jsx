@@ -9,9 +9,9 @@ export default function VideoPage() {
   const videoUrl = `https://cdn.videy.co/${id}.mp4`;
 
   return (
-    <div className="text-center">
+    <div className="py-10">
       {status === "loading" && (
-      <div className="mb-4 mx-auto">
+      <div className="text-center">
         <Loader /> Loading Video...
       </div>
       )}
@@ -24,7 +24,7 @@ export default function VideoPage() {
           <video
             src={videoUrl}
             controls
-            className="max-w-full mx-auto max-h-screen rounded-lg shadow-lg p-1 border border-gray-600"
+            className="w-full h-full rounded-lg shadow-lg p-1 border border-gray-600"
           />
         </div>
       )}

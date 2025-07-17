@@ -9,9 +9,9 @@ export default function ImagePage() {
   const imgUrl = `https://cdn.aceimg.com/${id}`;
 
   return (
-    <div className="text-center">
+    <div className="py-10">
       {status === "loading" && (
-      <div className="mb-4 mx-auto">
+      <div className="text-center">
         <Loader /> Loading Gambar..
       </div>
       )}
@@ -24,7 +24,7 @@ export default function ImagePage() {
         <img
           src={imgUrl}
           alt="Gambar"
-          className="max-w-full mx-auto max-h-screen rounded-lg shadow-lg border border-gray-600 p-1"
+          className="w-full h-full rounded-lg shadow-lg border border-gray-600 p-1"
         />
       </div>
       )}
