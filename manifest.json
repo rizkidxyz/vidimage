@@ -1,0 +1,17 @@
+{
+  "name": "VIDIMAGE",
+  "short_name": "VIDIMAGE",
+  "description": "VIDIMAGE - Free Video & Image Hosting",
+  "start_url": "https://vidimage.vercel.app",
+  "display": "standalone",
+  "background_color": "#0f67f5",
+  "theme_color": "#0f67f5",
+  "icons": [
+    {
+      "src": "https://cdn.aceimg.com/e8a82a97b.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
