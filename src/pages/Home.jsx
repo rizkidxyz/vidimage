@@ -56,7 +56,8 @@ export default function Home() {
         onSubmit={handleSubmit}
       >
       <p className="text-gray-300 text-lg leading-relaxed mb-6"><span className="text-white text-3xl font-bold">Vidimage </span>
-          Hosting atau Upload <span className="text-white font-semibold">video & gambar</span> secara gratis, tanpa login akun, serta akses tanpa iklan. Upload dan Bagikan ke siapapun sekarang juga! 🚀😎
+          Hosting atau Upload <span className="text-white font-semibold">video & gambar</span> secara gratis, tanpa login akun, serta akses tanpa iklan. Upload dan Bagikan ke siapapun sekarang juga! 🚀😎. 
+          <span className="ml-1 italic text-slate-400 text-sm font-medium">Penting! Harap baca <Link to="/s&k" className="text-blue-400 underline">Syarat dan Ketentuan</Link> yang berlaku</span>
         </p>
         {!isUploading && (
           <div className="mb-6">

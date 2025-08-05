@@ -4,8 +4,8 @@
   "description": "VIDIMAGE - Free Video & Image Hosting",
   "start_url": "https://vidimage.vercel.app",
   "display": "standalone",
-  "background_color": "#0f67f5",
-  "theme_color": "#0f67f5",
+  "background_color": "#161f2e",
+  "theme_color": "#161f2e",
   "icons": [
     {
       "src": "https://cdn.aceimg.com/e8a82a97b.png",
