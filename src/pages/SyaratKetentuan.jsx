@@ -2,7 +2,10 @@ import {Link} from "react-router-dom";
 
 export default function SyaratKetentuan() {
   return (
-    <div className="py-10 text-gray-300 flex flex-col">
+    <div className="py-8 text-gray-300 flex flex-col">
+      <span className="text-blue-400 font-bold mb-4 text-base">
+        <Link to="/">Home</Link> / Syarat & Ketentuan
+      </span>
       <h1 className="text-5xl text-gray-400 font-extrabold">Syarat dan Ketentuan Layanan</h1>
       <p className="my-4">Selamat datang di <Link to="/" className="text-blue-400 italic underline">vidimage.vercel.app</Link> Dengan menggunakan layanan ini, Anda setuju untuk mematuhi semua syarat dan ketentuan di bawah ini. Mohon baca dan pahami dengan seksama.</p>
 
@@ -40,9 +43,8 @@ export default function SyaratKetentuan() {
       {/* --- */}
       <h2 className="text-3xl text-gray-400 font-bold mt-6 mb-2">4. Kesimpulan</h2>
       <p className="my-4">
-        Singkatnya, layanan ini adalah jembatan yang memudahkan Anda mengunggah media ke layanan pihak lain. Sebagai konsekuensinya, semua yang Anda unggah akan bersifat publik, tidak dapat dihapus, dan Anda bertanggung jawab penuh atas semua konten tersebut.
+        Singkatnya, layanan ini adalah jembatan untuk memudahkan anda dalam mengunggah media ke beberapa platform lainnya hanya melalui satu layanan ini, dan pastinya meningkatkan flesksibilitas pengguna. Semua media yang anda upload bersifat publik, tidak bisa dihapus, dan anda tetap bertanggung jawab atas apa pun yang anda bagikan di sini.
       </p>
-
     </div>
   );
 }
